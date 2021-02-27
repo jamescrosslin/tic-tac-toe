@@ -1,11 +1,3 @@
-class Game {
-  constructor() {}
-}
-
-class Player {
-  constructor() {}
-}
-
-class Board {
-  constructor() {}
-}
+/*
+  4. script - logic for computer player?  - listen for user interaction
+*/
