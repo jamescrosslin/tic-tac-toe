@@ -20,6 +20,7 @@ let dom = {
   grid: document.querySelector('.grid'),
 }
 
+let choice
 
 
 let squaresTaken = {
@@ -35,9 +36,11 @@ let squaresTaken = {
 }
 
 let players = {
-  one: 1,
-  two: 2
+  one: false,
+  two: false
 }
+
+let random = Math.trunc(Math.random()*2)
 
 let playerSquaresOne = []
 let playerSquarestwo = []
@@ -46,6 +49,9 @@ dom.startGame.addEventListener('click', boardState)
 
  function boardState() {
  dom.grid.classList.remove('hide')
+ dom.playerIcon[random].classList.add('active')
+ players.random = true
+ 
 }
 
 dom.grid.addEventListener('click', boardStateBubbling)
@@ -53,10 +59,10 @@ dom.grid.addEventListener('click', boardStateBubbling)
 
 
 function boardStateBubbling(e) {
- playerSquaresOne.push(+e.target.id)
- e.target.innerHTML = 'X'
- squaresTaken[e.target.id] = true
- togglePlayer()
+  togglePlayer()
+  playerSquaresOne.push(+e.target.id)
+  e.target.innerHTML = choice
+  squaresTaken[e.target.id] = true
 // console.log(squaresTaken)
 //  console.log(playerSquaresOne)
 //  console.dir(e.target)
@@ -64,20 +70,19 @@ function boardStateBubbling(e) {
 
 function togglePlayer() {
   // listens for an event
-  for (let keys in players) {
-    if (players[keys] === true) {
-      // given the active player state
-      // given the active player css/state
-      players[keys] = false
-      console.log(players)
-      console.log(players)
-    }
-
-  }
-  // once event goes off go to the other player
-
+if( players.one === true) {
+  players.one = false
+  players.two = true
+  choice= 'X'
+  //do something place an X or O
+console.log('testing one')
+} else if (players.two ===true) {
+  players.one = true
+  players.two = false
+  choice = "O"
+  console.log('testing Two')
 }
-
+}
 
 
 
