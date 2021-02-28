@@ -15,19 +15,92 @@
 // document Object
 
 let dom = {
-  playerIcon: document.querySelectorAll('.playerIcon')
+  startGame: document.querySelector('#startGame'),
+  playerIcon: document.querySelectorAll('.playerIcon'),
+  grid: document.querySelector('.grid'),
 }
 
-function randomizer() {
-   return Math.trunc(Math.random() *2) +1
+
+
+let squaresTaken = {
+  '1': false,
+  '2': false,
+  '3': false,
+  '4': false,
+  '5': false,
+  '6': false,
+  '7': false,
+  '8': false,
+  '9': false
 }
 
-function activePlayer () {
-  // will add the active class to whos turn is it
- dom.playerIcon[0].classList.add('active')
+let players = {
+  one: 1,
+  two: 2
 }
 
-document.querySelector('#test').addEventListener('click', activePlayer)
+let playerSquaresOne = []
+let playerSquarestwo = []
+
+dom.startGame.addEventListener('click', boardState)
+
+ function boardState() {
+ dom.grid.classList.remove('hide')
+}
+
+dom.grid.addEventListener('click', boardStateBubbling)
+
+
+
+function boardStateBubbling(e) {
+ playerSquaresOne.push(+e.target.id)
+ e.target.innerHTML = 'X'
+ squaresTaken[e.target.id] = true
+ togglePlayer()
+// console.log(squaresTaken)
+//  console.log(playerSquaresOne)
+//  console.dir(e.target)
+}
+
+function togglePlayer() {
+  // listens for an event
+  for (let keys in players) {
+    if (players[keys] === true) {
+      // given the active player state
+      // given the active player css/state
+      players[keys] = false
+      console.log(players)
+      console.log(players)
+    }
+
+  }
+  // once event goes off go to the other player
+
+}
+
+
+
+
+
+
+
+
+
+
+// dom.playerIcon[0].classList.add('active')
+class Board {
+  constructor() {
+    
+  }
+  
+
+  // show the game board
+  
+
+}
+
+
+
 
 
 class Game {
@@ -35,20 +108,25 @@ class Game {
 }
 
 class Player {
-  constructor() {}
-
+  constructor() {
+    
+  }
+  
+  randomizer() {
+    return Math.trunc(Math.random() *2) +1
+  }
+  
+  activePlayer () {
+    // will add the active class to whos turn is it
+    dom.playerIcon[0].classList.add('active')
+  }
   togglePlayer (el) {
     // target the correct players turn
     // randomizer 1 or 2 will select the proper array element
-
+    
   }
 
-
-
-}
-
-class Board {
-  constructor() {}
+  // document.querySelector('#test').addEventListener('click', activePlayer)
 }
 
 
