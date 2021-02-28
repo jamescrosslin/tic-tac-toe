@@ -149,10 +149,6 @@ class Game {
 class Player {
   constructor() {}
 
-  randomizer() {
-    return Math.trunc(Math.random() * 2) + 1;
-  }
-
   activePlayer() {
     // will add the active class to whos turn is it
     dom.playerIcon[0].classList.add("active");
