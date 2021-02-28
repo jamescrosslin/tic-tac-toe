@@ -123,3 +123,7 @@ Player Icon Container
 .hide {
   display: none;
 }
+.selected {
+  border: 2px solid green;
+  font-size: 2.5rem;
+}

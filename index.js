@@ -70,7 +70,6 @@ function goesFirst() {
 }
 
 // handles anytime a person clicks on the block values(grid)
-dom.grid.addEventListener("click", boardStateBubbling);
 
 // function that runs each time a tile/block value is clicked and pushes to ONLY playerOne for now
 // will defintely be cleaned up and will need to be reworked to make the ACTIVE player push into
@@ -82,6 +81,7 @@ function boardStateBubbling(e) {
   // will need a function that checks if that square is availble
   playerSquaresOne.push(+e.target.id);
   // this checks which player is an X or O and changes the innerHTML accordingly
+  e.target.classList.add('selected')
   e.target.innerHTML = choice;
   // this will change the tiles that have been taken from false to true
   squaresTaken[e.target.id] = true;
@@ -134,5 +134,22 @@ function addActiveClass() {
 }
 
 // yup.... did not touch - will need help on tieing these classes in
-
+let game
 // dom.playerIcon[0].classList.add('active')
+dom.startGame.addEventListener('click',() => {
+  game = new Game(dom.playerIcon,dom.grid)
+  game.startGame()
+  game.board.checkSquares()
+
+  
+} )
+
+dom.grid.addEventListener('click',(e) => {
+  if(e.target.tagName === "DIV" && !e.target.classList.contains('selected')) {
+    game.handleSelection(e.target)
+    console.log('test')
+    boardStateBubbling(e)
+    
+  }
+})
+
