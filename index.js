@@ -136,27 +136,3 @@ function addActiveClass() {
 // yup.... did not touch - will need help on tieing these classes in
 
 // dom.playerIcon[0].classList.add('active')
-class Board {
-  constructor() {}
-
-  // show the game board
-}
-
-class Game {
-  constructor() {}
-}
-
-class Player {
-  constructor() {}
-
-  activePlayer() {
-    // will add the active class to whos turn is it
-    dom.playerIcon[0].classList.add("active");
-  }
-  togglePlayer(el) {
-    // target the correct players turn
-    // randomizer 1 or 2 will select the proper array element
-  }
-
-  // document.querySelector('#test').addEventListener('click', activePlayer)
-}

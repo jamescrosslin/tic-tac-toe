@@ -1,44 +1,42 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section class='gameContainer'>  
-        <article class="gameTitle">
-            <h1>Tic-Tac-Toe</h1>
-        </article> 
-        <section class="playerIconContainer">
-            <figure class='players one '>
-                <div id ='test' class='playerIcon'></div>
-            </figure>
-            <div class='buttonContainer'>
-                <button id='startGame'>Start the game!!</button>
-            </div>
-            <figure class='players two'>
-                <div class='playerIcon'></div>
-            </figure>
-        </section> 
-        <section class="gridContainer">
-            <div class ='grid hide'>
-                <div id='1' class ="gridSquares">1</div>
-                <div id='2' class ="gridSquares">2</div>
-                <div id='3' class ="gridSquares">3</div>
-                <div id='4' class ="gridSquares">4</div>
-                <div id='5' class ="gridSquares">5</div>
-                <div id='6' class ="gridSquares">6</div>
-                <div id='7' class ="gridSquares">7</div>
-                <div id='8' class ="gridSquares">8</div>
-                <div id='9' class ="gridSquares">9</div>
-            </div>
-        </section> 
-        
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="gameContainer">
+      <article class="gameTitle">
+        <h1>Tic-Tac-Toe</h1>
+      </article>
+      <section class="playerIconContainer">
+        <figure class="players one">
+          <div id="test" class="playerIcon"></div>
+        </figure>
+        <div class="buttonContainer">
+          <button id="startGame">Start the game!!</button>
+        </div>
+        <figure class="players two">
+          <div class="playerIcon"></div>
+        </figure>
+      </section>
+      <section class="gridContainer grid hide">
+        <div id="1" class="gridSquares">1</div>
+        <div id="2" class="gridSquares">2</div>
+        <div id="3" class="gridSquares">3</div>
+        <div id="4" class="gridSquares">4</div>
+        <div id="5" class="gridSquares">5</div>
+        <div id="6" class="gridSquares">6</div>
+        <div id="7" class="gridSquares">7</div>
+        <div id="8" class="gridSquares">8</div>
+        <div id="9" class="gridSquares">9</div>
+      </section>
     </section>
-
-
-<script src="index.js"></script>
-</body>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

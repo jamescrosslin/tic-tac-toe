@@ -21,10 +21,6 @@ body {
   box-shadow: 0px 0px 30px rgb(248, 194, 44);
 }
 
-.hide {
-  display: none;
-}
-
 /*******************************************************************************************
 
                         Game Container
@@ -107,23 +103,23 @@ Player Icon Container
 
 ********************************************************************************************/
 
-.gridContainer {
-  border: 1px solid red;
+.grid {
+  border: 10px solid orange;
   height: 56.5%;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-section > div {
-  border: 10px solid orange;
-  height: 100%;
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
+.grid div {
+  width: 25vw;
+  height: 25vw;
+  border: 1px solid blue;
+  display: inherit;
 }
 
-.grid div {
-  width: 33.3%;
-  border: 1px solid blue;
+.hide {
+  display: none;
 }
