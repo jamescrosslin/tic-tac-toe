@@ -1,0 +1,129 @@
+/*******************************************************************************************
+
+                        General/Global Layouts
+
+********************************************************************************************/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  width: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  border: 3px dotted rgb(70, 247, 70);
+  box-shadow: 0px 0px 30px rgb(248, 194, 44);
+}
+
+/*******************************************************************************************
+
+                        Game Container
+
+********************************************************************************************/
+
+.gameContainer {
+  height: 90%;
+  width: 90%;
+  border: 1px solid red;
+}
+
+/*******************************************************************************************
+
+                        Game Title
+
+********************************************************************************************/
+.gameTitle {
+  border: 1px solid green;
+  text-align: center;
+  height: 3.5%;
+}
+
+.gameTitle h1 {
+  margin: 0;
+}
+
+/*******************************************************************************************
+
+Player Icon Container
+
+********************************************************************************************/
+
+.playerIconContainer {
+  display: flex;
+  width: 90%;
+  height: 40%;
+  border: 1px solid purple;
+  margin: 0 auto;
+}
+.playerIconContainer div {
+  width: 100%;
+  height: 100%;
+}
+.one {
+  background-color: rgb(255, 91, 91);
+}
+.two {
+  background-color: magenta;
+}
+
+.players,
+.buttonContainer {
+  border: 1px solid green;
+  width: 33.33%;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonContainer button {
+  background-color: rgba(255, 255, 122, 0.6);
+  font: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  outline: none;
+}
+
+.buttonContainer button:hover {
+  background-color: rgb(103, 219, 103);
+  border: 2px solid rgb(51, 168, 51);
+}
+
+/*******************************************************************************************
+
+                        Grid Container
+
+********************************************************************************************/
+
+.grid {
+  border: 10px solid orange;
+  height: 56.5%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid div {
+  width: 25vw;
+  height: 25vw;
+  border: 1px solid blue;
+  display: inherit;
+}
+
+.hide {
+  display: none;
+}
+.selected {
+  border: 2px solid green;
+  font-size: 2.5rem;
+}
