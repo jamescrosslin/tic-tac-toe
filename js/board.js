@@ -1,3 +1,4 @@
+
 class Board {
   constructor(element) {
     this.gameBoard = element;
@@ -13,4 +14,13 @@ class Board {
     this.markedSquares[index] = player.symbol;
     console.log(this.markedSquares);
   }
+=======
+//1. board - individual boxes
+class Board {
+  constructor() {
+    //references to boxes in the DOM called "squares"
+  }
+  //mark box method
+  //check boxes for whether x or o
+
 }

@@ -1,3 +1,4 @@
+
 class Player {
   constructor(element, symbol) {
     this.playerElement = element;
@@ -11,3 +12,6 @@ class Player {
   }
   // document.querySelector('#test').addEventListener('click', activePlayer)
 }
+=======
+//2. players - X and O -
+
