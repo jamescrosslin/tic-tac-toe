@@ -1,6 +1,4 @@
-
 // document Object
-
 let dom = {
   startGame: document.querySelector("#startGame"),
   playerIcon: document.querySelectorAll(".playerIcon"),
@@ -45,8 +43,6 @@ dom.grid.addEventListener("click", (e) => {
     boardStateBubbling(e);
   }
 });
-=======
 /*
   4. script - logic for computer player?  - listen for user interaction
 */
-
