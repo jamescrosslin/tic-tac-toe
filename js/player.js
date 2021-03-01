@@ -1,4 +1,3 @@
-
 class Player {
   constructor(element, symbol) {
     this.playerElement = element;
@@ -7,11 +6,9 @@ class Player {
   }
   toggleActive() {
     this.active = !this.active;
-    console.log(this.active);
     return this.active;
   }
   // document.querySelector('#test').addEventListener('click', activePlayer)
 }
-=======
-//2. players - X and O -
 
+//2. players - X and O -

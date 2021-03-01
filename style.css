@@ -127,3 +127,6 @@ Player Icon Container
   border: 2px solid green;
   font-size: 2.5rem;
 }
+#X, #O{
+  height: 100px;
+}

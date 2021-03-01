@@ -1,6 +1,4 @@
-
 // document Object
-
 let dom = {
   startGame: document.querySelector("#startGame"),
   playerIcon: document.querySelectorAll(".playerIcon"),
@@ -15,18 +13,10 @@ function boardStateBubbling(e) {
 // displays the CSS active player icon
 
 function addActiveClass() {
-  // checks if player one is active
-  if (players.one === true) {
-    // will remove active from player one
-    dom.playerIcon[0].classList.add("active");
-    // will add active to player Two
-    dom.playerIcon[1].classList.remove("active");
-  } else {
-    // will add active to player Two
-    dom.playerIcon[1].classList.add("active");
-    // will remove active from player one
-    dom.playerIcon[0].classList.remove("active");
+  for (const player of [...game.playerElements]) {
+    player.classList.remove("active");
   }
+  game.activePlayer.playerElement.classList.add("active");
 }
 
 // yup.... did not touch - will need help on tieing these classes in
@@ -36,17 +26,22 @@ dom.startGame.addEventListener("click", () => {
   game = new Game(dom.playerIcon, dom.grid);
   game.startGame();
   dom.grid.classList.remove("hide");
+  addActiveClass();
 });
 
 dom.grid.addEventListener("click", (e) => {
   if (e.target.tagName === "DIV" && !e.target.classList.contains("selected")) {
+    e.target.innerHTML = game.activePlayer.symbol;
     game.handleSelection(e.target);
-    console.log("test");
     boardStateBubbling(e);
+    addActiveClass();
+    
+
   }
 });
-=======
+
+
+
 /*
   4. script - logic for computer player?  - listen for user interaction
 */
-
