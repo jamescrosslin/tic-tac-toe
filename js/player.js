@@ -9,7 +9,6 @@ class Player {
     console.log(this.active);
     return this.active;
   }
-  // document.querySelector('#test').addEventListener('click', activePlayer)
 }
 
 //2. players - X and O -

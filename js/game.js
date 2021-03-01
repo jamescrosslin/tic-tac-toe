@@ -36,4 +36,3 @@ class Game {
     this.changeActivePlayer();
   }
 }
-//3. game itself - game start & reset - winconditions

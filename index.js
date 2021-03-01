@@ -1,7 +1,7 @@
 // document Object
-let dom = {
+const dom = {
   startGame: document.querySelector("#startGame"),
-  playerIcon: document.querySelectorAll(".playerIcon"),
+  playerIcons: document.querySelectorAll(".playerIcon"),
   grid: document.querySelector(".grid"),
 };
 
@@ -23,7 +23,7 @@ function addActiveClass() {
 let game;
 // dom.playerIcon[0].classList.add('active')
 dom.startGame.addEventListener("click", () => {
-  game = new Game(dom.playerIcon, dom.grid);
+  game = new Game(dom.playerIcons, dom.grid);
   game.startGame();
   dom.grid.classList.remove("hide");
   addActiveClass();
@@ -37,6 +37,3 @@ dom.grid.addEventListener("click", (e) => {
     addActiveClass();
   }
 });
-/*
-  4. script - logic for computer player?  - listen for user interaction
-*/
