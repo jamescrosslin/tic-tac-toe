@@ -2,7 +2,8 @@ class Board {
   constructor(element) {
     this.gameBoard = element;
     this.squares = element.children;
-    this.markedSquares = ["", "", "", "", "", "", "", "", ""];
+    this.playerXSquares = [];
+    this.playerOSquares = [];
   }
   checkSquares() {
     console.log(this.squares);
@@ -10,7 +11,6 @@ class Board {
 
   selectSquare(square, player) {
     let index = [...this.squares].indexOf(square);
-    this.markedSquares[index] = player.symbol;
-    console.log(this.markedSquares);
+    this[`player${player.symbol}Squares`].push(index);
   }
 }

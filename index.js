@@ -31,8 +31,8 @@ dom.startGame.addEventListener("click", () => {
 
 dom.grid.addEventListener("click", (e) => {
   if (e.target.tagName === "DIV" && !e.target.classList.contains("selected")) {
+    e.target.innerHTML = game.activePlayer.symbol;
     game.handleSelection(e.target);
-
     boardStateBubbling(e);
     addActiveClass();
   }
