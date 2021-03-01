@@ -11,6 +11,7 @@ class Board {
 
   selectSquare(square, player) {
     let index = [...this.squares].indexOf(square);
+    //interpolates either "X" or "O" into the string to get the correct property
     this[`player${player.symbol}Squares`].push(index);
   }
 }
