@@ -12,10 +12,37 @@ class Board {
 
   selectSquare(square, player) {
     let index = [...this.squares].indexOf(square);
-    // console.log(index);
     this[`player${player.symbol}Squares`].push(index);
   }
 
+  checkWinConditions(playerXArr, playerOArr) {
+
+    playerXArr.sort((a, b) => a - b);
+    playerOArr.sort((a, b) => a - b);
+
+    let winConditions = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+
+    winConditions.forEach((arr) => {
+      if(JSON.stringify(playerXArr) === JSON.stringify(arr)) {
+        console.log('X win')
+      } else if (JSON.stringify(playerOArr) === JSON.stringify(arr)) {
+        console.log('O wins')
+      } else {
+        return false
+      }
+        // If either player array has more than 3 values this doesnt work also its not called anywhere
+    })
+  }
+      
    
   
 }
@@ -34,13 +61,18 @@ class Board {
 
 
 
-// checkWinConditions() {
+//  function checkWinConditions() {
 //   let winConditions = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 //   winConditions.forEach((x)=>{
-//     if(playerXSquares == x || playerOSquares == x){
+//     if(playerXsquares.includes(x)){
 //     console.log('win')
 //     }
 //   })
-//   checkWinConditions()
+  
   
 // }
+
+//arr1.every(val => arr2.includes(val))
+
+
+// if(playerXSquares.every(val => winConditions.includes(val)))
