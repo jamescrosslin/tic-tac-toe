@@ -106,7 +106,8 @@ Player Icon Container
 .grid {
   border: 10px solid orange;
   height: 56.5%;
-  width: 100%;
+  width: 40%;
+  margin-left: 30%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -114,8 +115,8 @@ Player Icon Container
 }
 
 .grid div {
-  width: 25vw;
-  height: 25vw;
+  width: 10vw;
+  height: 10vw;
   border: 1px solid blue;
   display: inherit;
 }

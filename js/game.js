@@ -20,7 +20,6 @@ class Game {
       symbols[randomSymbol ? 0 : 1]
     );
 
-    // random numbers comes back 0/1 - selects a random index from the array formed
     this.activePlayer = [this.player1, this.player2][random()];
     this.activePlayer.toggleActive();
   }
@@ -28,13 +27,13 @@ class Game {
     [this.activePlayer] = [this.player1, this.player2].filter((player) =>
       player.toggleActive()
     );
-    //dom.playerIcon[0].classList.add("active");
+
   }
 
   handleSelection(square) {
     this.board.selectSquare(square, this.activePlayer);
     // I put the check win conditions method call here because i dont know where else would be better and it works
-    this.board.checkWinConditions();
+    this.board.checkWinConditions(this.activePlayer);
     this.changeActivePlayer();
   }
 
@@ -43,4 +42,3 @@ class Game {
 
   // }
 }
-

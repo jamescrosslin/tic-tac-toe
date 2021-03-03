@@ -3,8 +3,8 @@ class Board {
     this.gameBoard = element;
     this.squares = element.children;
     this.playerXSquares = [];
-    this.playerOSquares = []; 
-    
+    this.playerOSquares = [];
+
   }
   checkSquares() {
     console.log(this.squares);
@@ -15,11 +15,7 @@ class Board {
     this[`player${player.symbol}Squares`].push(index);
   }
 
-  checkWinConditions(playerXArr, playerOArr) {
-
-    playerXArr = this.playerXSquares.sort((a, b) => a - b);
-    playerOArr = this.playerOSquares.sort((a, b) => a - b);
-
+  checkWinConditions(player) {
     let winConditions = [
       [0, 1, 2],
       [3, 4, 5],
@@ -28,28 +24,19 @@ class Board {
       [1, 4, 7],
       [2, 5, 8],
       [0, 4, 8],
-      [2, 4, 6]
+      [2, 4, 6],
     ];
-
-    winConditions.forEach((arr) => {
-      if(JSON.stringify(playerXArr) === JSON.stringify(arr)) {
-        document.querySelector('h2').innerText = 'X Wins'
-      } else if (JSON.stringify(playerOArr) === JSON.stringify(arr)) {
-        document.querySelector('h2').innerText = 'O Wins'
-      } else {
-        return false
+  
+    for (let condition of winConditions) {
+      if (condition.every((val) =>this[`player${player.symbol}Squares`].includes(val))) {
+        document.querySelector("h2").innerText = `${player.symbol} Wins`;
+        return true;
       }
-        // If either player array has more than 3 values this doesnt work !!!!!!!!
-    })
+      return false;
+    }
   }
-      
-   
   
-}
-
-  
-  
-
+  }
 
 
 
