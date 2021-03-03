@@ -36,6 +36,7 @@ dom.grid.addEventListener("click", (e) => {
     boardStateBubbling(e);
     addActiveClass();
     
+    
   }
 });
 

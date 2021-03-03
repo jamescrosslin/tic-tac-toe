@@ -33,7 +33,14 @@ class Game {
 
   handleSelection(square) {
     this.board.selectSquare(square, this.activePlayer);
+    // I put the check win conditions method call here because i dont know where else would be better and it works
+    this.board.checkWinConditions();
     this.changeActivePlayer();
   }
+
+  // i must make a method that ends the game inputs here maybe adds a reset board button 
+  // endGame(){
+
+  // }
 }
-//3. game itself - game start & reset - winconditions
+
