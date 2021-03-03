@@ -33,7 +33,7 @@ class Game {
   handleSelection(square) {
     this.board.selectSquare(square, this.activePlayer);
     // I put the check win conditions method call here because i dont know where else would be better and it works
-    this.board.checkWinConditions(this.activePlayer);
+    if(this.board.checkWinConditions(this.activePlayer)) return true;
     this.changeActivePlayer();
   }
 

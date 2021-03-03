@@ -27,10 +27,10 @@ dom.startGame.addEventListener("click", () => {
 });
 
 dom.grid.addEventListener("click", (e) => {
-  if (e.target.tagName === "DIV" && !e.target.classList.contains("selected")) {
+  if (e.target.tagName === "DIV" && !e.target.classList.contains("selected") && game) {
     e.target.innerHTML = game.activePlayer.symbol;
-    game.handleSelection(e.target);
     boardStateBubbling(e);
+    if(game.handleSelection(e.target)) return game = "" ;
     addActiveClass();
 
 

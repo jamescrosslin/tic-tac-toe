@@ -28,15 +28,17 @@ class Board {
     ];
   
     for (let condition of winConditions) {
-      if (condition.every((val) =>this[`player${player.symbol}Squares`].includes(val))) {
+      if (condition.every((number) => this[`player${player.symbol}Squares`].includes(number))) {
         document.querySelector("h2").innerText = `${player.symbol} Wins`;
         return true;
       }
-      return false;
+      
     }
+    if([...this.playerXSquares, ...this.playerOSquares].length === 9){
+      document.querySelector("h2").innerText = 'Draw';
+      return true
+    }
+    return false;
   }
   
-  }
-
-
-
+}
