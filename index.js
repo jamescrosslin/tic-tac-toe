@@ -8,7 +8,7 @@ function boardStateBubbling(e) {
    e.target.classList.add("selected");
 }
 
-// displays the CSS active player icon
+
 
 function addActiveClass() {
   for (const player of [...game.playerElements]) {
