@@ -8,7 +8,7 @@ class Player {
     this.active = !this.active;
     return this.active;
   }
-  // document.querySelector('#test').addEventListener('click', activePlayer)
+  
 }
 
-//2. players - X and O -
+
