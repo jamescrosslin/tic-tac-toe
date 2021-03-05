@@ -39,15 +39,12 @@ dom.grid.addEventListener("click", (e) => {
       dom.startGame.classList.remove('hide');
       dom.startGame.innerText = 'New Game'
       return game = null} 
-      if(dom.startGame.innerText==='New Game'){
-        console.log('ok')
-      }
+     
+     
      
   }
 });
 
-if(dom.startGame.innerText==='New Game'){
-  console.log('ok')
-}
+
 
 
