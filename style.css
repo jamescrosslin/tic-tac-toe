@@ -10,7 +10,7 @@
 body {
   height: auto;
   width: auto;
-
+  background:rgba(88, 87, 87, .5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ body {
 .gameContainer {
   height: 90%;
   width: 90%;
-  border: 1px solid red;
+  
 }
 
 /*******************************************************************************************
@@ -39,13 +39,14 @@ body {
 
 ********************************************************************************************/
 .gameTitle {
-  border: 1px solid green;
+ 
   text-align: center;
   height: 3.5%;
 }
 
 .gameTitle h1 {
-  margin: 0;
+  margin:0;
+  font-size:3rem;
 }
 
 /*******************************************************************************************
@@ -58,7 +59,7 @@ Player Icon Container
   display: flex;
   width: 90%;
   height: 40%;
-  border: 1px solid purple;
+  
   margin: 0 auto;
 }
 .playerIconContainer div {
@@ -66,15 +67,18 @@ Player Icon Container
   height: 100%;
 }
 .one {
-  background-color: rgb(255, 91, 91);
+  background-color: rgb(251, 2, 2);
+  
+  
 }
 .two {
-  background-color: magenta;
+  background-color: rgb(37, 0, 245);
+  
 }
 
 .players,
 .buttonContainer {
-  border: 1px solid green;
+  
   width: 33.33%;
 }
 .buttonContainer {
@@ -88,8 +92,9 @@ Player Icon Container
   font-weight: bold;
   border: none;
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px;
   outline: none;
+  margin-top:60px;
 }
 
 .buttonContainer button:hover {
@@ -104,8 +109,8 @@ Player Icon Container
 ********************************************************************************************/
 
 .grid {
-  border: 10px solid orange;
-  height: 56.5%;
+  
+  height: 60%;
   width: 40%;
   margin-left: 30%;
   display: flex;
@@ -115,9 +120,9 @@ Player Icon Container
 }
 
 .grid div {
-  width: 10vw;
-  height: 10vw;
-  border: 1px solid blue;
+  width: 9vw;
+  height: 9vw;
+  border: 2px solid blue;
   display: inherit;
 }
 
@@ -129,7 +134,9 @@ Player Icon Container
   font-size: 2.5rem;
 }
 #X, #O{
-  height: 100px;
+  height: 200px;
+  
+  
 }
 
 h2{
